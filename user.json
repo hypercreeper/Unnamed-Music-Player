@@ -1,0 +1,26 @@
+{
+    "country": "AE",
+    "display_name": "Hyper_creeper",
+    "email": "hyper1creeper@gmail.com",
+    "explicit_content": {
+        "filter_enabled": false,
+        "filter_locked": false
+    },
+    "external_urls": {
+        "spotify": "https://open.spotify.com/user/u0mtlv3hwvhr8iec0s2ccchvu"
+    },
+    "followers": {
+        "href": null,
+        "total": 0
+    },
+    "href": "https://api.spotify.com/v1/users/u0mtlv3hwvhr8iec0s2ccchvu",
+    "id": "u0mtlv3hwvhr8iec0s2ccchvu",
+    "images": [{
+        "height": null,
+        "url": "https://scontent-iad3-1.xx.fbcdn.net/v/t1.30497-1/84628273_176159830277856_972693363922829312_n.jpg?stp=c94.0.320.320a_dst-jpg_p320x320&_nc_cat=1&ccb=1-7&_nc_sid=12b3be&_nc_ohc=vyBvlKNz5isAX9r063F&_nc_ht=scontent-iad3-1.xx&edm=AP4hL3IEAAAA&oh=00_AfCqB3vKE-JkKCG5l21UJJXK3xyHfv7YshAYBmlz4eXdbA&oe=6400DA19",
+        "width": null
+    }],
+    "product": "free",
+    "type": "user",
+    "uri": "spotify:user:u0mtlv3hwvhr8iec0s2ccchvu"
+}

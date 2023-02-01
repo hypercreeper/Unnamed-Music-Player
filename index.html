@@ -1,0 +1,120 @@
+<!-- <!DOCTYPE html> -->
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Unnamed Music Player</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #3498DB, #E91E63);
+            background: -webkit-linear-gradient(135deg, #3498DB, #E91E63);
+            overflow: hidden;
+            font-family: Roboto;
+        }
+        
+        .playlistListContainer {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            margin: 15px 15px 15px 15px;
+            background-color: rgba(255, 255, 255, 10%);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            height: 95%;
+            aspect-ratio: 9/16;
+            box-shadow: rgba(0, 0, 0, 0.1) -2px -2px 10px 5px;
+            display: grid;
+            columns: 1;
+            grid-auto-rows: 30%; /* new */
+            overflow: auto; /* new */
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        ::-webkit-scrollbar {
+            background-color: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(188, 188, 188, 0.2);
+            border-radius: 10px;
+        }
+        .playlistListItem {
+            margin: 10px 10px 10px 10px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            background-color: rgba(255, 255, 255, 10%);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            width: 94%;
+            aspect-ratio: 18/9;
+            box-shadow: rgba(0, 0, 0, 0.05) -2px -2px 10px 1px;
+        }
+        .musicPlayerContainer {
+            position: absolute;
+            top: 0px;
+            left: 350px;
+            margin: 15px 15px 15px 15px;
+            background-color: rgba(255, 255, 255, 10%);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            height: 95%;
+            aspect-ratio: 1.75/1;
+            box-shadow: rgba(0, 0, 0, 0.1) -2px -2px 10px 5px;
+            display: flex;
+            align-items: flex-end;
+        }
+        .bottomBtnBar {
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        button {
+            border-radius: 50%;
+            min-width: 65px;
+            aspect-ratio: 1/1;
+            border: none;
+            cursor: pointer;
+            background-color: rgba(188, 188, 188, 0.3);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            margin-right: 100px;
+            transition-duration: 0.1s;
+        }
+        button:active {
+            background-color: rgba(188, 188, 188, 0.5);
+        }
+        .btnimg {
+            opacity: 0.4;
+        }
+        #pfpimg {
+            aspect-ratio: 1/1;
+            height: 50px;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: 100%;
+            transform: translateX(-120%);
+            background-color: transparent;
+            cursor: pointer;
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>
+    <a href="/login"><img id="pfpimg" title="Click to login"></a>
+    
+    <div class="playlistListContainer">
+        <div class="playlistListItem" id="referencer" style="position: absolute; top: -1000px;"></div>
+    </div>
+    <div class="musicPlayerContainer">
+        <div class="bottomBtnBar">
+            <button id="previousButton"><img class="btnimg" src="/images/Previous.svg"></img></button>
+            <button id="pausePlayButton" onclick="togglePlayback()"><img class="btnimg" src="/images/Play.svg"></img></button>
+            <button id="nextButon" style="margin-right: 0px"><img class="btnimg" src="/images/Next.svg"></img></button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="spotifyPlayer.js"></script>
+</body>
+</html>
