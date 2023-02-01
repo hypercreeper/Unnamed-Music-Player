@@ -16,16 +16,17 @@ The Unnamed Music Player is an Spotify Web API and Spotify Web Playback SDK test
 2. Extract the files
 3. open a terminal or command prompt and change directory to the extracted folder
 4. Run the python file: 
-### Windows
-`python app.py`
+#### Windows: `python app.py`
 
-### Linux/macOS
-`python3 app.py`
+#### Linux/macOS: `python3 app.py`
 
 5. then go to http://localhost:5000 and click on the top right corner to login to your Spotify account
 6. press on 'Click to continue' and it should redirect back to the site
 
 ## What works
-| Access user account | ✅ |
-| Get User Playlists | ✅ |
-| Web Playback (IDK if this works) | ❓ |
+| Feature | Support | Comment |
+|----------|----------|----------|
+| Access user account | ✅ | The login system is a bit messy, needs some cleanup |
+| Get User Playlists | ✅ | Works perfectly but is static (doesn't do anything but show the playlist |
+| Web Playback | ⚠️ | IDK if this feature works or not, further testing required |
+
