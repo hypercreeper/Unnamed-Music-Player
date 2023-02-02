@@ -28,5 +28,5 @@ The Unnamed Music Player is an Spotify Web API and Spotify Web Playback SDK test
 |----------|----------|----------|
 | Access user account | ✅ | The login system is a bit messy, needs some cleanup |
 | Get User Playlists | ✅ | Works perfectly but is static (doesn't do anything but show the playlist |
-| Web Playback | ⚠️ | IDK if this feature works or not, further testing required |
+| Web Playback | ⚠️ | This feature should work but i cant test due to spotify accounts |
 
