@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <title>Unnamed Music Player</title>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
-    <script src="https://sdk.scdn.co/spotify-player.js"></script>
     <style>
         body {
             background: linear-gradient(135deg, #3498DB, #E91E63);
@@ -60,11 +59,17 @@
             height: 95%;
             aspect-ratio: 1.75/1;
             box-shadow: rgba(0, 0, 0, 0.1) -2px -2px 10px 5px;
-            display: flex;
-            align-items: flex-end;
+            /* display: flex;
+            align-items: flex-end; */
         }
         .bottomBtnBar {
             margin-bottom: 50px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .centerBar {
+            margin-bottom: 100px;
             display: flex;
             justify-content: center;
             width: 100%;
@@ -108,9 +113,12 @@
         <div class="playlistListItem" id="referencer" style="position: absolute; top: -1000px;"></div>
     </div>
     <div class="musicPlayerContainer">
+        <div class="centerBar">
+            <h1 style="text-align: center;">htellow</h1>
+        </div>
         <div class="bottomBtnBar">
             <button id="previousButton"><img class="btnimg" src="/images/Previous.svg"></img></button>
-            <button id="pausePlayButton" onclick="togglePlayback()"><img class="btnimg" src="/images/Play.svg"></img></button>
+            <button id="pausePlayButton"><img class="btnimg" src="/images/Play.svg"></img></button>
             <button id="nextButon" style="margin-right: 0px"><img class="btnimg" src="/images/Next.svg"></img></button>
         </div>
     </div>

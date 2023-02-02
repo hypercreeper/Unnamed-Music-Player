@@ -73,7 +73,7 @@ def spotifygetauthtoken():
 
 @app.route("/login")
 def spotifyauthstart():
-    scopes = "user-read-private user-read-email playlist-read-private playlist-read-collaborative".replace(" ", "%20")
+    scopes = "user-read-private user-read-email playlist-read-private playlist-read-collaborative app-remote-control streaming".replace(" ", "%20")
     return "<script>location.href = 'https://accounts.spotify.com/authorize?response_type=code&client_id=77e587a9a2644f0eb40fa597371de715&scope=" + scopes + "&redirect_uri=http://localhost:5000/login/auth/token';</script>"
 
 

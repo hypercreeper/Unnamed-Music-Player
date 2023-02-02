@@ -1,11 +1,3 @@
-function togglePlayback() {
-    if(document.getElementById("pausePlayButton").children[0].src == location.href.replace("/index.html", "") + "images/Play.svg") {
-        document.getElementById("pausePlayButton").children[0].src = "/images/Pause.svg";
-    }
-    else {
-        document.getElementById("pausePlayButton").children[0].src = "/images/Play.svg";
-    }
-}
 var SpotifyUserData;
 fetch('/login/auth')
   .then(response => response.json())
@@ -68,6 +60,7 @@ fetch('/login/auth')
             imggradient.style.background = "linear-gradient(90deg, transparent, #c36daa)";
             playlistitem.appendChild(imggradient);
         }
+        initSpotifyPlayer();
     })
       .catch(error => console.error(error));
 
