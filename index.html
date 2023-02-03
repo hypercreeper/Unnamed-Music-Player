@@ -69,9 +69,11 @@
             width: 100%;
         }
         .centerBar {
-            margin-bottom: 100px;
+            margin-bottom: 80px;
             display: flex;
+            flex-direction: column;
             justify-content: center;
+            align-items: center;
             width: 100%;
         }
         button {
@@ -104,6 +106,26 @@
             cursor: pointer;
             z-index: 3;
         }
+        @keyframes marquee {
+            0% {
+                transform: translateX(250%);
+            }
+            25% {
+                transform: translateX(-250%);
+            }
+            50% {
+                transform: translateX(250%);
+            }
+            75% {
+                transform: translateX(50%);
+            }
+            100% {
+                transform: translateX(-250%);
+            }
+        }
+        .movingHeader {
+            animation: marquee 15s infinite linear;
+        }
     </style>
 </head>
 <body>
@@ -114,7 +136,9 @@
     </div>
     <div class="musicPlayerContainer">
         <div class="centerBar">
-            <h1 style="text-align: center;">htellow</h1>
+            <h1 class="movingHeader" style="text-align: center;">Song name - aslkdjasljdld</h1>
+            <h2 style="text-align: center; color: rgb(46, 46, 46)">Subtitle</h2>
+            <img style="height: 250px; aspect-ratio: 1/1;">
         </div>
         <div class="bottomBtnBar">
             <button id="previousButton"><img class="btnimg" src="/images/Previous.svg"></img></button>
